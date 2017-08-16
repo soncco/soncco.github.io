@@ -21,7 +21,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".about {\n  text-align: center;\n  padding: 80px 0 50px;\n  font-size: 18px;\n}\n\n.categorias {\n  text-align: center;\n  padding-bottom: 50px;\n}\n\n.categoria {\n  display: inline-block;\n  text-align: center;\n  font-size: 18px;\n  width: 180px;\n}\n", ""]);
+exports.push([module.i, ".about {\n  text-align: center;\n  padding: 80px 0 50px;\n  font-size: 18px;\n}\n\n", ""]);
 
 // exports
 
@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"about\">\n    <p><strong>RHUA</strong> Representaciones es una empresa 100% peruana dedicada a la confección de uniformes y prendas de vestir para las diferentes actividades de la industria minera, pesquera, alimentaria, médica y seguridad.</p>\n\n    <p>Nos caracterizamos por brindar un servicio con los más altos estándares de calidad, somos socios estratégicos de nuestos clientes para audarlos a reforzar su imagen institucional, con un valor agregado en cada proyecto que desarrollamos.</p>\n\n    <p>Contamos con una división encargada de ofrecer artículos de Merchandising y Promoción para su empresa, los cuales ayudarán a generar mayor recordación de su marca.</p>\n  </div>\n\n  <div class=\"categorias\">\n    <ng-container *ngFor=\"let categoria of categorias\">\n      <div *ngIf=\"categoria.show\" class=\"categoria\">\n        <a [routerLink]=\"['/categoria', categoria.pic]\">\n            <div class=\"image\">\n              <img src=\"assets/{{categoria.pic}}-round.png\" alt=\"{{categoria.name}}\">\n            </div>\n            <h4>{{categoria.short}}</h4>\n        </a>\n      </div>\n    </ng-container>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"about\">\n    <p><strong>RHUA</strong> Representaciones es una empresa 100% peruana dedicada a la confección de uniformes y prendas de vestir para las diferentes actividades de la industria minera, pesquera, alimentaria, médica y seguridad.</p>\n\n    <p>Nos caracterizamos por brindar un servicio con los más altos estándares de calidad, somos socios estratégicos de nuestos clientes para audarlos a reforzar su imagen institucional, con un valor agregado en cada proyecto que desarrollamos.</p>\n\n    <p>Contamos con una división encargada de ofrecer artículos de Merchandising y Promoción para su empresa, los cuales ayudarán a generar mayor recordación de su marca.</p>\n  </div>\n\n  <mini></mini>\n</div>\n"
 
 /***/ }),
 
@@ -43,7 +43,6 @@ module.exports = "<div class=\"container\">\n  <div class=\"about\">\n    <p><st
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__categoria_service__ = __webpack_require__("../../../../../src/app/categoria.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -51,22 +50,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
 
 var AboutComponent = (function () {
-    function AboutComponent(categoriaService) {
-        this.categoriaService = categoriaService;
+    function AboutComponent() {
     }
-    AboutComponent.prototype.getCategorias = function () {
-        var _this = this;
-        this.categoriaService.getCategorias().then(function (categorias) { return _this.categorias = categorias; });
-    };
-    AboutComponent.prototype.ngOnInit = function () {
-        this.getCategorias();
-    };
     return AboutComponent;
 }());
 AboutComponent = __decorate([
@@ -74,11 +61,9 @@ AboutComponent = __decorate([
         selector: 'about',
         template: __webpack_require__("../../../../../src/app/about.component.html"),
         styles: [__webpack_require__("../../../../../src/app/about.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__categoria_service__["a" /* CategoriaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__categoria_service__["a" /* CategoriaService */]) === "function" && _a || Object])
+    })
 ], AboutComponent);
 
-var _a;
 //# sourceMappingURL=about.component.js.map
 
 /***/ }),
@@ -199,12 +184,13 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_component__ = __webpack_require__("../../../../../src/app/header.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__footer_component__ = __webpack_require__("../../../../../src/app/footer.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__social_links_component__ = __webpack_require__("../../../../../src/app/social-links.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__categoria_service__ = __webpack_require__("../../../../../src/app/categoria.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__producto_service__ = __webpack_require__("../../../../../src/app/producto.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_component__ = __webpack_require__("../../../../../src/app/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__about_component__ = __webpack_require__("../../../../../src/app/about.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__detalle_component__ = __webpack_require__("../../../../../src/app/detalle.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mini_component__ = __webpack_require__("../../../../../src/app/mini.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__categoria_service__ = __webpack_require__("../../../../../src/app/categoria.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__producto_service__ = __webpack_require__("../../../../../src/app/producto.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__home_component__ = __webpack_require__("../../../../../src/app/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__about_component__ = __webpack_require__("../../../../../src/app/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__detalle_component__ = __webpack_require__("../../../../../src/app/detalle.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -212,6 +198,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -238,17 +225,18 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__header_component__["a" /* HeaderComponent */],
             __WEBPACK_IMPORTED_MODULE_4__footer_component__["a" /* FooterComponent */],
             __WEBPACK_IMPORTED_MODULE_5__social_links_component__["a" /* SocialLinksComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__about_component__["a" /* AboutComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__detalle_component__["a" /* DetalleComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__about_component__["a" /* AboutComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__detalle_component__["a" /* DetalleComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__mini_component__["a" /* MiniComponent */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_11__app_routing_module__["a" /* AppRoutingModule */]
+            __WEBPACK_IMPORTED_MODULE_12__app_routing_module__["a" /* AppRoutingModule */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_6__categoria_service__["a" /* CategoriaService */],
-            __WEBPACK_IMPORTED_MODULE_7__producto_service__["a" /* ProductoService */]
+            __WEBPACK_IMPORTED_MODULE_7__categoria_service__["a" /* CategoriaService */],
+            __WEBPACK_IMPORTED_MODULE_8__producto_service__["a" /* ProductoService */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
     })
@@ -320,7 +308,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "h1 {\n  color: #16bdcd;\n  font-size: 30px;\n  font-weight: bold;\n  border-bottom: 15px solid #f1f3f2;\n}\n\n.producto {\n  text-align: center;\n  padding-bottom: 20px;\n}\n\n.producto a {\n  color: #14becd;\n}\n\n.producto h4 {\n  margin-bottom: 0px;\n}\n\n.producto p {\n  font-size: 11px;\n  color: #a8a9ab;\n}\n\n.background {\n  position: fixed;\n  top: 0;\n  left: 0;\n  background: rgba(124,188,172,0.8);\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  z-index: 100;\n}\n\n.background img {\n  width: 50%;\n  vertical-align: middle;\n}\n\n@media(max-width: 768px) {\n  .background img {\n    width: 90%;\n  }\n}\n\n.background button {\n  background: none;\n  color: white;\n  border: 0;\n  border-radius: 50%;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  font-weight: bold;\n  font-size: 40px;\n  width: 50px;\n  height: 50px;\n\n}", ""]);
+exports.push([module.i, "h1 {\n  color: #16bdcd;\n  font-size: 30px;\n  font-weight: bold;\n  border-bottom: 15px solid #f1f3f2;\n}\n\n.producto {\n  text-align: center;\n  padding-bottom: 20px;\n}\n\n.producto a {\n  color: #14becd;\n}\n\n.producto h4 {\n  margin-bottom: 0px;\n}\n\n.producto p {\n  font-size: 11px;\n  color: #a8a9ab;\n}\n\n.background {\n  position: fixed;\n  top: 0;\n  left: 0;\n  background: #fff;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  z-index: 100;\n}\n\n.background img {\n  padding-top: 2%;\n  width: 50%;\n  vertical-align: middle;\n}\n\n@media(max-width: 768px) {\n  .background img {\n    width: 90%;\n  }\n}\n\n.background button {\n  background: transparent url(" + __webpack_require__("../../../../../src/assets/button-close.png") + ") no-repeat;\n  width: 52px;\n  height: 52px;\n  border: 0;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  text-indent: -10000px;\n}\n", ""]);
 
 // exports
 
@@ -333,7 +321,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/detalle.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div *ngIf=\"categoria\" class=\"detalle\">\n    <div class=\"row\">\n      <div class=\"col-md-4\" *ngFor=\"let producto of productos\">\n        <div *ngIf=\"producto.categoria_id == categoria.id\" class=\"producto\">\n          <a href=\"assets/productos/{{producto.pic}}-b.jpg\" (click)=\"ver(producto.pic); false\">\n            <img src=\"assets/productos/{{producto.pic}}.jpg\" alt=\"{{producto.name}}\">\n            <h4>{{producto.name}}</h4>\n            <p>ver</p>\n          </a>\n        </div>\n      </div>\n    </div>\n    <h1>{{categoria.name}}</h1>\n  </div>\n</div>\n\n\n<ng-container *ngFor=\"let producto of productos\">\n  <ng-container *ngIf=\"producto.categoria_id == categoria.id\" class=\"producto\">\n    <div class=\"background\" *ngIf=\"shown==producto.pic\">\n      <img src=\"assets/productos/{{producto.pic}}-b.jpg\" alt=\"\">\n      <button (click)=\"shown=''\">x</button>\n    </div>\n  </ng-container>\n</ng-container>"
+module.exports = "<div class=\"container\">\n  <div *ngIf=\"categoria\" class=\"detalle\">\n    <div class=\"row\">\n      <div class=\"col-md-4\" *ngFor=\"let producto of productos\">\n        <div *ngIf=\"producto.categoria_id == categoria.id\" class=\"producto\">\n          <a href=\"assets/productos/{{producto.pic}}-b.jpg\" (click)=\"ver(producto.pic); false\">\n            <img src=\"assets/productos/{{producto.pic}}.jpg\" alt=\"{{producto.name}}\">\n            <h4>{{producto.name}}</h4>\n            <p>ver</p>\n          </a>\n        </div>\n      </div>\n    </div>\n    <h1>{{categoria.name}}</h1>\n  </div>\n  <mini></mini>\n</div>\n\n\n<ng-container *ngFor=\"let producto of productos\">\n  <ng-container *ngIf=\"producto.categoria_id == categoria.id\" class=\"producto\">\n    <div class=\"background\" *ngIf=\"shown==producto.pic\">\n      <img src=\"assets/productos/{{producto.pic}}-b.jpg\" alt=\"\">\n      <button (click)=\"shown=''\">x</button>\n    </div>\n  </ng-container>\n</ng-container>"
 
 /***/ }),
 
@@ -417,7 +405,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".info {\n  background: transparent url(" + __webpack_require__("../../../../../src/assets/bg-stats.jpg") + ") no-repeat;\n  height: 265px;\n}\n\n@media(max-width: 1024px) {\n  .info {\n    background-image: none;\n    background-color: #91d2d6;\n    height: auto;\n    padding-bottom: 50px;\n  }\n}\n\n.numbers {\n  color: #fff;\n  text-align: center;\n  text-transform: uppercase;\n  font-size: 20px;\n  margin-top:  60px;\n}\n\n.numbers span {\n  display: block;\n  font-size: 74px;\n  font-weight: 100;\n}\n\n.find-us {\n\n}\n\na:hover {\n  color: #03493d\n}\n\n#clientes {\n  padding-bottom: 40px;\n  text-align: center;\n}\n\n#clientes img {\n  display: inline-block;\n}\n\n#contacto {\n  background: #f1f3f0;  \n  padding-top: 50px;\n}\n\n.contact-container {\n  color: #4ab7b1;\n  font-size: 12px;\n}\n\n.contact-container h3 {\n  font-size: 14px;\n  font-weight: bold\n}\n\n.form-container .form-control {\n  font-weight: 100;\n  font-size: 14px;\n  border-radius: 15px;\n}\n\n.form-container button {\n  background: #4ab7b1;\n  font-size: 14px;\n  border-radius: 15px;\n  color: #fff;\n}\n\n.find-us {\n  background: #4ab7b1;\n  color: #fff;\n  display: inline-block;\n  padding: 10px 20px;\n  border-radius: 15px 15px 0 0;\n}\n\n#contacto p {\n  margin: 0\n}\n\n.footer {\n  background: #4ab7b1;\n  color: #fff;\n  font-size: 12px;\n}\n\n@media(max-width: 768px) {\n  .footer {\n    text-align: center;\n  }\n}\n\n.footer h3 {\n  font-size: 14px;\n  font-weight: bold;\n}\n\n.footer a {\n  color: #fff\n}\n\n.footer a:hover {\n  color: #0A4A3D;\n}\n\n.logo-footer {\n  margin-top: 40px;\n  display: inline-block;\n}\n", ""]);
+exports.push([module.i, ".info {\n  background: transparent url(" + __webpack_require__("../../../../../src/assets/bg-stats.jpg") + ") repeat-x center;\n  height: 265px;\n}\n\n@media(max-width: 1024px) {\n  .info {\n    background-image: none;\n    background-color: #91d2d6;\n    height: auto;\n    padding-bottom: 50px;\n  }\n}\n\n.numbers {\n  color: #fff;\n  text-align: center;\n  text-transform: uppercase;\n  font-size: 20px;\n  margin-top:  60px;\n}\n\n.numbers span {\n  display: block;\n  font-size: 74px;\n  font-weight: 100;\n}\n\n.find-us {\n\n}\n\na:hover {\n  color: #03493d\n}\n\n#clientes {\n  padding-bottom: 40px;\n  text-align: center;\n}\n\n#clientes img {\n  display: inline-block;\n}\n\n#contacto {\n  background: #f1f3f0;  \n  padding-top: 50px;\n}\n\n.contact-container {\n  color: #4ab7b1;\n  font-size: 12px;\n}\n\n.contact-container h3 {\n  font-size: 14px;\n  font-weight: bold\n}\n\n.form-container .form-control {\n  font-weight: 100;\n  font-size: 14px;\n  border-radius: 15px;\n}\n\n.form-container button {\n  background: #4ab7b1;\n  font-size: 14px;\n  border-radius: 15px;\n  color: #fff;\n}\n\n.find-us {\n  background: #4ab7b1;\n  color: #fff;\n  display: inline-block;\n  padding: 10px 20px;\n  border-radius: 15px 15px 0 0;\n}\n\n#contacto p {\n  margin: 0\n}\n\n.footer {\n  background: #4ab7b1;\n  color: #fff;\n  font-size: 12px;\n}\n\n@media(max-width: 768px) {\n  .footer {\n    text-align: center;\n  }\n}\n\n.footer h3 {\n  font-size: 14px;\n  font-weight: bold;\n}\n\n.footer a {\n  color: #fff\n}\n\n.footer a:hover {\n  color: #0A4A3D;\n}\n\n.logo-footer {\n  margin-top: 40px;\n  display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -517,7 +505,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\n  <h1 class=\"logo\"><a routerLink=\"/\"><img src=\"assets/logo.png\" alt=\"rhua\"></a></h1>\n  <nav class=\"main-nav\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-6\">\n          <ul class=\"list-unstyled\">\n            <li><a routerLink=\"/nosotros\" routerLinkActive=\"active\">Nosotros</a></li>\n            <li><a [routerLink]=\"['/categoria', 'corporativo']\" routerLinkActive=\"active\">Productos</a></li>\n            <li><a routerLink=\"/\" fragment=\"clientes\" (click)=\"onAnchorClick()\">Clientes</a></li>\n            <li><a routerLink=\"/\" fragment=\"contacto\" (click)=\"onAnchorClick()\">Contacto</a></li>\n          </ul>\n        </div>\n        <div class=\"col-md-6\">\n          <social-links></social-links>\n        </div>\n      </div>\n    </div>\n  </nav>\n</div>"
+module.exports = "<div class=\"header\">\n  <h1 class=\"logo\"><a routerLink=\"/\"><img src=\"assets/logo.png\" alt=\"rhua\"></a></h1>\n  <nav class=\"main-nav\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-6\">\n          <ul class=\"list-unstyled\">\n            <li><a routerLink=\"/nosotros\" routerLinkActive=\"active\">Nosotros</a></li>\n            <li><a routerLink=\"/\" fragment=\"productos\" (click)=\"onAnchorClick()\">Productos</a></li>\n            <li><a routerLink=\"/\" fragment=\"clientes\" (click)=\"onAnchorClick()\">Clientes</a></li>\n            <li><a routerLink=\"/\" fragment=\"contacto\" (click)=\"onAnchorClick()\">Contacto</a></li>\n          </ul>\n        </div>\n        <div class=\"col-md-6\">\n          <social-links></social-links>\n        </div>\n      </div>\n    </div>\n  </nav>\n</div>"
 
 /***/ }),
 
@@ -587,7 +575,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"slider\">\n  <div class=\"slide\"><img src=\"assets/slide1.jpg\" alt=\"\"></div>\n  <div class=\"slide\"><img src=\"assets/slide2.jpg\" alt=\"\"></div>\n  <div class=\"slide\"><img src=\"assets/slide3.jpg\" alt=\"\"></div>\n</div>\n\n<div class=\"container\">\n  <div class=\"categorias\">\n    <div class=\"row\">\n      <div *ngFor=\"let categoria of categorias\" class=\"col-md-4\">\n        <a [routerLink]=\"['/categoria', categoria.pic]\">\n          <div class=\"categoria\">\n            <div class=\"image\">\n              <img src=\"assets/{{categoria.pic}}.jpg\" alt=\"{{categoria.name}}\">\n              <div class=\"effect\">\n                <p>Ver más</p>\n              </div>\n            </div>\n            <h4>{{categoria.name}}</h4>\n          </div>\n        </a>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div id=\"slider\">\n  <div class=\"slide\"><img src=\"assets/slide1.jpg\" alt=\"\"></div>\n  <div class=\"slide\"><img src=\"assets/slide2.jpg\" alt=\"\"></div>\n  <div class=\"slide\"><img src=\"assets/slide3.jpg\" alt=\"\"></div>\n</div>\n\n<div class=\"container\">\n  <div class=\"categorias\" id=\"productos\">\n    <div class=\"row\">\n      <div *ngFor=\"let categoria of categorias\" class=\"col-md-4\">\n        <a [routerLink]=\"['/categoria', categoria.pic]\">\n          <div class=\"categoria\">\n            <div class=\"image\">\n              <img src=\"assets/{{categoria.pic}}.jpg\" alt=\"{{categoria.name}}\">\n              <div class=\"effect\">\n                <p>Ver más</p>\n              </div>\n            </div>\n            <h4>{{categoria.name}}</h4>\n          </div>\n        </a>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -639,6 +627,76 @@ HomeComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=home.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/mini.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".categorias {\n  text-align: center;\n  padding-bottom: 50px;\n}\n\n.categoria {\n  display: inline-block;\n  text-align: center;\n  font-size: 18px;\n  width: 180px;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/mini.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"categorias\">\n  <ng-container *ngFor=\"let categoria of categorias\">\n    <div *ngIf=\"categoria.show\" class=\"categoria\">\n      <a [routerLink]=\"['/categoria', categoria.pic]\">\n          <div class=\"image\">\n            <img src=\"assets/{{categoria.pic}}-round.png\" alt=\"{{categoria.name}}\">\n          </div>\n          <h4>{{categoria.short}}</h4>\n      </a>\n    </div>\n  </ng-container>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/mini.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__categoria_service__ = __webpack_require__("../../../../../src/app/categoria.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MiniComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MiniComponent = (function () {
+    function MiniComponent(categoriaService) {
+        this.categoriaService = categoriaService;
+    }
+    MiniComponent.prototype.getCategorias = function () {
+        var _this = this;
+        this.categoriaService.getCategorias().then(function (categorias) { return _this.categorias = categorias; });
+    };
+    MiniComponent.prototype.ngOnInit = function () {
+        this.getCategorias();
+    };
+    return MiniComponent;
+}());
+MiniComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+        selector: 'mini',
+        template: __webpack_require__("../../../../../src/app/mini.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/mini.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__categoria_service__["a" /* CategoriaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__categoria_service__["a" /* CategoriaService */]) === "function" && _a || Object])
+], MiniComponent);
+
+var _a;
+//# sourceMappingURL=mini.component.js.map
 
 /***/ }),
 
@@ -763,7 +821,7 @@ ProductoService = __decorate([
 /***/ "../../../../../src/app/social-links.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"links\">\n  <a href=\"https://www.facebook.com/Rhua-Representaciones-189164621191094/\" class=\"fb\" target=\"_blank\">Facebook</a>\n  <a href=\"#\" class=\"ig\" target=\"_blank\">Instagram</a>\n  <a href=\"mailto:ventas@rhuarepresentaciones.com\" class=\"em\" target=\"_blank\">E-mail</a>\n</div>\n"
+module.exports = "<div class=\"links\">\n  <a href=\"https://www.facebook.com/Rhua-Representaciones-189164621191094/\" class=\"fb\" target=\"_blank\">Facebook</a>\n  <!--a href=\"#\" class=\"ig\" target=\"_blank\">Instagram</a-->\n  <a href=\"mailto:ventas@rhuarepresentaciones.com\" class=\"em\" target=\"_blank\">E-mail</a>\n</div>\n"
 
 /***/ }),
 
@@ -803,10 +861,17 @@ module.exports = __webpack_require__.p + "bg-stats.8778878786859eeb1744.jpg";
 
 /***/ }),
 
+/***/ "../../../../../src/assets/button-close.png":
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUFBMDJCMTI4MkQ0MTFFNzhCRUJBREU2OEY2Q0Y4MDYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUFBMDJCMTE4MkQ0MTFFNzhCRUJBREU2OEY2Q0Y4MDYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgV2luZG93cyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJFNTE4MDhDMzQyNzFGQUE1MDBBRTQ5NDU4NEUyNzRDMSIgc3RSZWY6ZG9jdW1lbnRJRD0iRTUxODA4QzM0MjcxRkFBNTAwQUU0OTQ1ODRFMjc0QzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4RQAQYAAANaUlEQVR42sxaa2wc1RU+987sxnb8XNtNYxuT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"
+
+/***/ }),
+
 /***/ "../../../../../src/assets/ico-ver-mas-cat.png":
 /***/ (function(module, exports) {
 
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA6NJREFUeNrsXP11mzAQF7z+XzYoG4QNQicIG5gRsoHpBH6ZwPYEcSeATGBnAtMJcCegknvnXlRIhI2EhHLv3cPP5kP66b503DlgE1Dbtgk/RJxjYEo1MAuCoDI5rsDAxMVkU873nBPgISSAEaC8ct5xgGqnwAAAMs6LDyZ/kQJCXdJC6cB5qxuYMUBIOa/b/6nh/My5gHMihXtFcG4B1zYd9xXfp7aBkHAuOwAQwGQawJaBKScHBVZvJQ3syDlXWf0bn53DsyitdT+3bzCZtEJnECYYhwxKM6Y0qgxAlobCAlUtpMVZmVALahv2EDPYYrtiGBMdX6QLiP3k+jlccsddsA4gcmY5gS2hdiTxEogeQI43S7KrQPQAcr0NkaJJ54DoAWR96w1WzHEC14v0ONRFoc8u2UyIhAUNbCY1XeQGGNGgRYYwe7g4uQNIpmwHSZxfspkSkfyjqtFMDQ0sh8GVpjwW2MT3pWMKqZCsfGHwuWtZOkKaOGH/0m0/2PzpCY4xbvlD8uMCjgfTWekpiM9R5FIrOvcQXQ77m8AVtGX+EM5VeJgIJUOoCMbsG4/A2JHPGYLxAMeKi8/JFyRgrgjIA5UMQS/MP8I5pyHYC/QilYdg4JzPNiMhYuMdGOBVLnEGglEzf6lCMKJPMNgJwbj7BOP8hv+NZPxinlOocSOUtgrET12Sy5atGqVOgeEifdFslFRcdUzinFrRdp2cAgP893eVfAZRlS2/rpjSZmDQceexhnxFMH5jOOoxGAmCUdMvPKVYVpNoTu9IBoQAl41qSDcqnkpHIscZ6ALvPQQDE1uHUEpwZB6CgdFshWBg6iu2qUbLgL2IiZr8DEmAhF5l4ZFU5BjRisQW3Ztg2jy3tXBNA+HCb+SN2oYEX5kHKpKTPdHTGzCgQh8BWXogFTjHqrM7QXo7/WhohbBzoDD85v/j3Ah5O93M0XYMqt6R6rmeZwgGrR6OVS6gNRPZjIBIr6oFIcWwsyhyk9RjPzg6oxe7bD+kku/r6silyrjSYTDGqXQWLvamUmO7gFiNfcO1Kyojj1vXja22IV2NQrp9dGNdTym7tJUejai2FMpa0azXEx+ZaQvpQP84pZRAMLWXxpOY1svVlJ3HAEJpRaPvOwPSWgdO6s1byaintuhrVzs29sPflD0DKcx6+uBH67QONICCfxXRtcHDXOsrfO57my6AEzr/jfX/50YlMlRBEOxcCHhiiF7Ldjwq4Z5aNo5/BBgAYZhhzfRlkFUAAAAASUVORK5CYII="
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEUAAABFCAYAAAAcjSspAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA0tJREFUeNrsnP+RqjAQxyNz/0sJdHDpADp4lEAHlvB4FfCs4CyB14FWIFeBdCBW4Etmdm/WvYDgSQSSncnkHM+E/eSbzQ8CQnj7ZivbFV6vV6mySCWdryE3WaXSBfJ6tVpVi4GiIGgAqUqxSolK4YNFNSrtVTqoVCpI9aygKBAhgNh0KGEPjn62fP8OAJMOJW0BUDPZvqhhqJSrdL7emv78oVIGyhmsNvjtR0vZOTTELGBoJ9IR6kuh7GnCgQs8GS4ushGvDI1xGqMhhqiDt1bxipaCaykMKg1tXoRU6Ugu4AhD7atV+5rrgoqpXPMJBvycdWc5ZmUZqywVEzWIdbTxMhtApJi4GVSdPbtw2k9DMRODIEzjjHw27fOcgDAw56eonFGeRZfp2biPq53NQ1Ixc1M+JHQe82j0nuyw+6ThOh3abXDqflzaJhIJCafe3YjRlAuEIgf1AhapC0sXGUF/T2wsJKHOoveISlRibfhlyswt1Ukb/6bOwLBjtoGP20nvaP3QwLctfNxQAQTsf3U0xi//iuXbDnLcPjVCQZXslqwSopaagNl8gwIBDkeaf8IdQ18lBvmAdR1tjSJYukIEfG0oAwolhrwU7llJGVAoCeQHB6EcKIMAZ3hk1Nk7CAV91nMXiUqJWER2ypjPEUKRDquEq+VLKWsceRyGgr6vuVI+HYaCvsu3sVe/Kst6/GtM/+65KNyNFf/eRqavofwe+JtEtB+/4DFgFCiB8GZdKbol//TsPglRwKFn2fODAn3+bnyAGPI1o1a/y1+pFOw+eMju3eFeg75XCOWC01yHoaDvF66UxGEoCVdKzeYWThnzuQ4gIFZkmps4rBK9wVYFhgVR7CCUmDKgUHBukDoIJaUMKBTckguXcMJgQDyht3XKGygw0cJR6JdDKkFfK1xg8rUP3jHLXBiF2Cp+27YgpNv9mQMqQR8bEj5uoXTdX12gSvrfN/dHMTpWrf7Qjlkt/niXafz2BwHNBSztyGj6oyOjpBv5w8V3CvPH0FuitX9ggRTuH23pCcbth6A66OcTBJJbV7V/sLI7gBX+Edz2vusf1m5pKf9Y/0A49AUQ8kFFWHsBhH9ViC0ovJWFf6nM/WFTTPz1Q/8FGAB5p/4lMq9oJgAAAABJRU5ErkJggg=="
 
 /***/ }),
 
