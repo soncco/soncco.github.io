@@ -149,14 +149,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppComponent = (function () {
     function AppComponent(router) {
         this.router = router;
+        router.events.subscribe(function (s) {
+            if (s instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* NavigationEnd */]) {
+                var tree = router.parseUrl(router.url);
+                if (tree.fragment) {
+                    var element = document.querySelector("#" + tree.fragment);
+                    if (element) {
+                        element.scrollIntoView(element);
+                    }
+                }
+            }
+        });
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.router.events.subscribe(function (evt) {
-            if (!(evt instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* NavigationEnd */])) {
-                return;
-            }
-            window.scrollTo(0, 0);
-        });
     };
     return AppComponent;
 }());
@@ -308,7 +313,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "h1 {\n  color: #16bdcd;\n  font-size: 30px;\n  font-weight: bold;\n  border-bottom: 15px solid #f1f3f2;\n}\n\n.producto {\n  text-align: center;\n  padding-bottom: 20px;\n}\n\n.producto a {\n  color: #14becd;\n}\n\n.producto h4 {\n  margin-bottom: 0px;\n}\n\n.producto p {\n  font-size: 11px;\n  color: #a8a9ab;\n}\n\n.background {\n  position: fixed;\n  top: 0;\n  left: 0;\n  background: #fff;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  z-index: 100;\n}\n\n.background img {\n  padding-top: 2%;\n  width: 50%;\n  vertical-align: middle;\n}\n\n@media(max-width: 768px) {\n  .background img {\n    width: 90%;\n  }\n}\n\n.background button {\n  background: transparent url(" + __webpack_require__("../../../../../src/assets/button-close.png") + ") no-repeat;\n  width: 52px;\n  height: 52px;\n  border: 0;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  text-indent: -10000px;\n}\n", ""]);
+exports.push([module.i, "h1 {\n  color: #04BDCC;\n  font-size: 30px;\n  font-weight: bold;\n  border-bottom: 15px solid #f1f3f2;\n}\n\n.producto {\n  text-align: center;\n  padding-bottom: 20px;\n}\n\n.producto a {\n  color: #14becd;\n}\n\n.producto h4 {\n  margin-bottom: 0px;\n}\n\n.producto p {\n  font-size: 11px;\n  color: #a8a9ab;\n}\n\n.background {\n  position: fixed;\n  top: 0;\n  left: 0;\n  background: #fff;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  z-index: 100;\n}\n\n.background img {\n  padding-top: 2%;\n  width: 50%;\n  vertical-align: middle;\n}\n\n@media(max-width: 768px) {\n  .background img {\n    width: 90%;\n  }\n}\n\n.background button {\n  background: transparent url(" + __webpack_require__("../../../../../src/assets/button-close.png") + ") no-repeat;\n  width: 52px;\n  height: 52px;\n  border: 0;\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  text-indent: -10000px;\n}\n", ""]);
 
 // exports
 
@@ -405,7 +410,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".info {\n  background: transparent url(" + __webpack_require__("../../../../../src/assets/bg-stats.jpg") + ") repeat-x center;\n  height: 265px;\n}\n\n@media(max-width: 1024px) {\n  .info {\n    background-image: none;\n    background-color: #91d2d6;\n    height: auto;\n    padding-bottom: 50px;\n  }\n}\n\n.numbers {\n  color: #fff;\n  text-align: center;\n  text-transform: uppercase;\n  font-size: 20px;\n  margin-top:  60px;\n}\n\n.numbers span {\n  display: block;\n  font-size: 74px;\n  font-weight: 100;\n}\n\n.find-us {\n\n}\n\na:hover {\n  color: #03493d\n}\n\n#clientes {\n  padding-bottom: 40px;\n  text-align: center;\n}\n\n#clientes img {\n  display: inline-block;\n}\n\n#contacto {\n  background: #f1f3f0;  \n  padding-top: 50px;\n}\n\n.contact-container {\n  color: #4ab7b1;\n  font-size: 12px;\n}\n\n.contact-container h3 {\n  font-size: 14px;\n  font-weight: bold\n}\n\n.form-container .form-control {\n  font-weight: 100;\n  font-size: 14px;\n  border-radius: 15px;\n}\n\n.form-container button {\n  background: #4ab7b1;\n  font-size: 14px;\n  border-radius: 15px;\n  color: #fff;\n}\n\n.find-us {\n  background: #4ab7b1;\n  color: #fff;\n  display: inline-block;\n  padding: 10px 20px;\n  border-radius: 15px 15px 0 0;\n}\n\n#contacto p {\n  margin: 0\n}\n\n.footer {\n  background: #4ab7b1;\n  color: #fff;\n  font-size: 12px;\n}\n\n@media(max-width: 768px) {\n  .footer {\n    text-align: center;\n  }\n}\n\n.footer h3 {\n  font-size: 14px;\n  font-weight: bold;\n}\n\n.footer a {\n  color: #fff\n}\n\n.footer a:hover {\n  color: #0A4A3D;\n}\n\n.logo-footer {\n  margin-top: 40px;\n  display: inline-block;\n}\n", ""]);
+exports.push([module.i, ".info {\n  background: transparent url(" + __webpack_require__("../../../../../src/assets/bg-stats.jpg") + ") repeat-x center;\n  height: 265px;\n}\n\n@media(max-width: 1024px) {\n  .info {\n    background-image: none;\n    background-color: #41C0C2;\n    height: auto;\n    padding-bottom: 50px;\n  }\n}\n\n.numbers {\n  color: #fff;\n  text-align: center;\n  text-transform: uppercase;\n  font-size: 20px;\n  margin-top:  60px;\n}\n\n.numbers span {\n  display: block;\n  font-size: 74px;\n  font-weight: 100;\n}\n\n.find-us {\n\n}\n\na:hover {\n  color: #03493d\n}\n\n#clientes {\n  padding-bottom: 40px;\n  text-align: center;\n}\n\n#clientes .cliente-container {\n  display: inline-block;\n}\n\n@media(min-width: 1024px) {\n  #clientes .cliente-container {\n    width: 15.666666666666%;\n  }\n\n  #clientes img {\n    width: 100%;\n  }\n\n  #clientes .gatorade {\n    width: 50%\n  }\n}\n\n#contacto {\n  background: #f1f3f0;  \n  padding-top: 50px;\n}\n\n.contact-container {\n  color: #04BDCC;\n  font-size: 12px;\n}\n\n.contact-container h3 {\n  font-size: 14px;\n  font-weight: bold\n}\n\n.form-container .form-control {\n  font-weight: 100;\n  font-size: 14px;\n  border-radius: 15px;\n}\n\n.form-container button {\n  background: #04BDCC;\n  font-size: 14px;\n  border-radius: 15px;\n  color: #fff;\n}\n\n.find-us {\n  background: #04BDCC;\n  color: #fff;\n  display: inline-block;\n  padding: 10px 20px;\n  border-radius: 15px 15px 0 0;\n}\n\n#contacto p {\n  margin: 0;\n  line-height: 1em;\n}\n\n.footer {\n  background: #04BDCC;\n  color: #fff;\n  font-size: 12px;\n}\n\n@media(max-width: 768px) {\n  .footer {\n    text-align: center;\n  }\n}\n\n.footer h3 {\n  font-size: 14px;\n  font-weight: bold;\n}\n\n.footer a {\n  color: #fff\n}\n\n.footer a:hover {\n  color: #0A4A3D;\n}\n\n.logo-footer {\n  margin-top: 40px;\n  display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -418,7 +423,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"info\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>367</span>\n          productos realizados\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>85</span>\n          clientes felices\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>30</span>\n          licitaciones\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>183</span>\n          proyectos\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"container\">\n  <div class=\"logos\" id=\"clientes\">\n    <img src=\"assets/logos/gatorade.png\" alt=\"Gatorade\" class=\"cliente\">\n    <img src=\"assets/logos/mapfre.png\" alt=\"Mapfre\" class=\"cliente\">\n    <img src=\"assets/logos/sura.png\" alt=\"Seguros Sura\" class=\"cliente\">\n    <img src=\"assets/logos/lima.png\" alt=\"Municipalidad de Lima\" class=\"cliente\">\n    <img src=\"assets/logos/lays.png\" alt=\"Lays\" class=\"cliente\">\n    <img src=\"assets/logos/pepsi.png\" alt=\"Pepsi\" class=\"cliente\">\n    <img src=\"assets/logos/falabella.png\" alt=\"Seguros Falabella\" class=\"cliente\">\n    <img src=\"assets/logos/volkswagen.png\" alt=\"Volkswagen\" class=\"cliente\">\n    <img src=\"assets/logos/entel.png\" alt=\"Entel\" class=\"cliente\">\n    <img src=\"assets/logos/bcp.png\" alt=\"BCP\" class=\"cliente\">\n    <img src=\"assets/logos/essalud.png\" alt=\"ESSALUD\" class=\"cliente\">\n    <img src=\"assets/logos/protransporte.png\" alt=\"ProTransporte\" class=\"cliente\">\n  </div>\n  <div class=\"social-clientes\">\n    <social-links></social-links>\n  </div>\n</div>\n\n<div class=\"contact\" id=\"contacto\">\n  <div class=\"container\">\n    <div class=\"col-md-4\">\n      <div class=\"form-container\">\n        <form>\n          <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" name=\"nombre\" placeholder=\"Nombre\" required>\n          </div>\n          <div class=\"form-group\">\n            <input type=\"email\" class=\"form-control\" name=\"email\" placeholder=\"Correo\" required>\n          </div>\n          <div class=\"form-group\">\n            <textarea name=\"\" id=\"\" cols=\"30\" rows=\"10\" class=\"form-control\" name=\"mensaje\" placeholder=\"Mensaje\" required></textarea>\n          </div>\n          <button class=\"btn btn-info\">Enviar</button>\n        </form>\n      </div>\n    </div>\n    <div class=\"col-md-4 col-md-offset-4\">\n      <div class=\"contact-container\">\n        <h3>Contacto</h3>\n        <p>\n          Dirección: Ca. Fray Angélico 421 - 101 San Borja <br>\n          Teléfonos: (01) 2251514 - 987005608 <br>\n          Correo: ventas@rhuarepresentaciones.com\n        </p>\n        <social-links></social-links>\n      </div>\n    </div>\n  </div>\n  <p class=\"text-center\">\n    <span class=\"find-us\">Encuéntranos</span>\n  </p>\n</div>\n\n<div class=\"map\">\n  <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1358187957862!2d-77.00198508518683!3d-12.102853191429986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7dcc5162103%3A0x30e44adc43cb76b3!2sLeo+Delibes%2C+Distrito+de+Lima+15037!5e0!3m2!1ses-419!2spe!4v1501116590902\" width=\"100%\" height=\"350\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>\n</div>\n\n<footer class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-2\">\n        <a routerLink=\"/\" class=\"logo-footer\"><img src=\"assets/logo-footer.png\" alt=\"rhua\"></a>\n      </div>\n      <div class=\"col-md-8\">\n        <div class=\"row\">\n          <div class=\"col-md-2 footer-links\">\n            <h3>Nosotros</h3>\n            <ul class=\"list-unstyled\">\n              <li><a [routerLink]=\"['/nosotros']\">Quienes somos</a></li>\n              <li><a [routerLink]=\"['/nosotros']\">Misión</a></li>\n              <li><a [routerLink]=\"['/nosotros']\">Visión</a></li>\n            </ul>\n          </div>\n          <div class=\"col-md-2 footer-links\">\n            <h3>Productos</h3>\n            <ul class=\"list-unstyled\">\n              <li *ngFor=\"let categoria of categorias\"><a [routerLink]=\"['/categoria', categoria.pic]\">{{categoria.short}}</a></li>\n            </ul>\n          </div>\n          <div class=\"col-md-2 footer-links\">\n            <h3>Clientes</h3>\n          </div>\n          <div class=\"col-md-6 footer-links\">\n            <h3>Contacto</h3>\n            <p>\n              Dirección: Ca. Fray Angélico 421 - 101 San Borja <br>\n              Teléfonos: (01) 2251514 - 987005608 <br>\n              Correo: ventas@rhuarepresentaciones.com\n            </p>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-md-2\">\n        <social-links></social-links>\n      </div>\n    </div>\n  </div>\n</footer>"
+module.exports = "<div class=\"info\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>367</span>\n          productos realizados\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>85</span>\n          clientes felices\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>30</span>\n          licitaciones\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>183</span>\n          proyectos\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"container\">\n  <div class=\"logos\" id=\"clientes\">\n    <div class=\"cliente-container\"><img src=\"assets/logos/gatorade.png\" alt=\"Gatorade\" class=\"cliente gatorade\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/mapfre.png\" alt=\"Mapfre\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/sura.png\" alt=\"Seguros Sura\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/lima.png\" alt=\"Municipalidad de Lima\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/lays.png\" alt=\"Lays\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/pepsi.png\" alt=\"Pepsi\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/falabella.png\" alt=\"Seguros Falabella\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/volkswagen.png\" alt=\"Volkswagen\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/entel.png\" alt=\"Entel\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/bcp.png\" alt=\"BCP\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/essalud.png\" alt=\"ESSALUD\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/protransporte.png\" alt=\"ProTransporte\" class=\"cliente\"></div>\n  </div>\n  <div class=\"social-clientes\">\n    <social-links></social-links>\n  </div>\n</div>\n\n<div class=\"contact\" id=\"contacto\">\n  <div class=\"container\">\n    <div class=\"col-md-4\">\n      <div class=\"form-container\">\n        <form>\n          <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" name=\"nombre\" placeholder=\"Nombre\" required>\n          </div>\n          <div class=\"form-group\">\n            <input type=\"email\" class=\"form-control\" name=\"email\" placeholder=\"Correo\" required>\n          </div>\n          <div class=\"form-group\">\n            <textarea name=\"\" id=\"\" cols=\"30\" rows=\"10\" class=\"form-control\" name=\"mensaje\" placeholder=\"Mensaje\" required></textarea>\n          </div>\n          <button class=\"btn btn-info\">Enviar</button>\n        </form>\n      </div>\n    </div>\n    <div class=\"col-md-4 col-md-offset-4\">\n      <div class=\"contact-container\">\n        <h3>Contacto</h3>\n        <p>\n          Dirección: Ca. Fray Angélico 421 - 101 San Borja <br>\n          Teléfonos: (01) 2251514 - 987005608 <br>\n          Correo: ventas@rhuarepresentaciones.com\n        </p>\n        <social-links></social-links>\n      </div>\n    </div>\n  </div>\n  <p class=\"text-center\">\n    <span class=\"find-us\">Encuéntranos</span>\n  </p>\n</div>\n\n<div class=\"map\">\n  <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1358187957862!2d-77.00198508518683!3d-12.102853191429986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7dcc5162103%3A0x30e44adc43cb76b3!2sLeo+Delibes%2C+Distrito+de+Lima+15037!5e0!3m2!1ses-419!2spe!4v1501116590902\" width=\"100%\" height=\"350\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>\n</div>\n\n<footer class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-2\">\n        <a routerLink=\"/\" class=\"logo-footer\"><img src=\"assets/logo-footer.png\" alt=\"rhua\"></a>\n      </div>\n      <div class=\"col-md-8\">\n        <div class=\"row\">\n          <div class=\"col-md-2 footer-links\">\n            <h3>Nosotros</h3>\n            <ul class=\"list-unstyled\">\n              <li><a [routerLink]=\"['/nosotros']\">Quienes somos</a></li>\n              <li><a [routerLink]=\"['/nosotros']\">Misión</a></li>\n              <li><a [routerLink]=\"['/nosotros']\">Visión</a></li>\n            </ul>\n          </div>\n          <div class=\"col-md-2 footer-links\">\n            <h3>Productos</h3>\n            <ul class=\"list-unstyled\">\n              <li *ngFor=\"let categoria of categorias\"><a [routerLink]=\"['/categoria', categoria.pic]\">{{categoria.short}}</a></li>\n            </ul>\n          </div>\n          <div class=\"col-md-2 footer-links\">\n            <h3>Clientes</h3>\n          </div>\n          <div class=\"col-md-6 footer-links\">\n            <h3>Contacto</h3>\n            <p>\n              Dirección: Ca. Fray Angélico 421 - 101 San Borja <br>\n              Teléfonos: (01) 2251514 - 987005608 <br>\n              Correo: ventas@rhuarepresentaciones.com\n            </p>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-md-2\">\n        <social-links></social-links>\n      </div>\n    </div>\n  </div>\n</footer>"
 
 /***/ }),
 
@@ -492,7 +497,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".logo {\n  text-align: center;\n}\n\n.main-nav {\n  background: #f1f3f0;\n  padding: 15px 0\n}\n\n.main-nav li {\n  float: left;\n  padding: 0 15px;\n  border-right: 1px solid #4ab7b1;\n}\n\n.main-nav li:last-child {\n  border-right: 0; \n}\n\n.main-nav li a {\n  display: inline-block;\n  padding: 4px 10px;\n  color: #4ab7b1;\n}\n\n.main-nav li a:hover, .main-nav li a.active {\n  color: #000;\n}\n\n@media(max-width: 480px) {\n  .main-nav li {\n    float: none;\n    border-right: 0;\n    text-align: center;\n    border-bottom: 1px solid #4ab7b1; \n  }\n}", ""]);
+exports.push([module.i, ".logo {\n  text-align: center;\n}\n\n.main-nav {\n  background: #f1f3f0;\n  padding: 15px 0\n}\n\n.main-nav li {\n  float: left;\n  padding: 0 15px;\n  border-right: 1px solid #04BDCC;\n}\n\n.main-nav li:last-child {\n  border-right: 0; \n}\n\n.main-nav li a {\n  display: inline-block;\n  padding: 4px 10px;\n  color: #04BDCC;\n}\n\n.main-nav li a:hover, .main-nav li a.active {\n  color: #000;\n}\n\n@media(max-width: 480px) {\n  .main-nav li {\n    float: none;\n    border-right: 0;\n    text-align: center;\n    border-bottom: 1px solid #04BDCC; \n  }\n}", ""]);
 
 // exports
 
@@ -505,7 +510,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\n  <h1 class=\"logo\"><a routerLink=\"/\"><img src=\"assets/logo.png\" alt=\"rhua\"></a></h1>\n  <nav class=\"main-nav\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-6\">\n          <ul class=\"list-unstyled\">\n            <li><a routerLink=\"/nosotros\" routerLinkActive=\"active\">Nosotros</a></li>\n            <li><a routerLink=\"/\" fragment=\"productos\" (click)=\"onAnchorClick()\">Productos</a></li>\n            <li><a routerLink=\"/\" fragment=\"clientes\" (click)=\"onAnchorClick()\">Clientes</a></li>\n            <li><a routerLink=\"/\" fragment=\"contacto\" (click)=\"onAnchorClick()\">Contacto</a></li>\n          </ul>\n        </div>\n        <div class=\"col-md-6\">\n          <social-links></social-links>\n        </div>\n      </div>\n    </div>\n  </nav>\n</div>"
+module.exports = "<div class=\"header\">\n  <h1 class=\"logo\"><a routerLink=\"/\"><img src=\"assets/logo.png\" alt=\"rhua\"></a></h1>\n  <nav class=\"main-nav\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-6\">\n          <ul class=\"list-unstyled\">\n            <li><a routerLink=\"/nosotros\" routerLinkActive=\"active\">Nosotros</a></li>\n            <li><a routerLink=\"/\" fragment=\"productos\">Productos</a></li>\n            <li><a routerLink=\"/\" fragment=\"clientes\">Clientes</a></li>\n            <li><a routerLink=\"/\" fragment=\"contacto\">Contacto</a></li>\n          </ul>\n        </div>\n        <div class=\"col-md-6\">\n          <social-links></social-links>\n        </div>\n      </div>\n    </div>\n  </nav>\n</div>"
 
 /***/ }),
 
@@ -514,7 +519,6 @@ module.exports = "<div class=\"header\">\n  <h1 class=\"logo\"><a routerLink=\"/
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -522,22 +526,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
 
 var HeaderComponent = (function () {
-    function HeaderComponent(route) {
-        this.route = route;
+    function HeaderComponent() {
     }
-    HeaderComponent.prototype.onAnchorClick = function () {
-        this.route.fragment.subscribe(function (f) {
-            var element = document.querySelector("#" + f);
-            if (element)
-                element.scrollIntoView(element);
-        });
-    };
     return HeaderComponent;
 }());
 HeaderComponent = __decorate([
@@ -545,11 +537,9 @@ HeaderComponent = __decorate([
         selector: 'app-header',
         template: __webpack_require__("../../../../../src/app/header.component.html"),
         styles: [__webpack_require__("../../../../../src/app/header.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _a || Object])
+    })
 ], HeaderComponent);
 
-var _a;
 //# sourceMappingURL=header.component.js.map
 
 /***/ }),
@@ -562,7 +552,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#slider {\n\n}\n\n#slider img {\n  width: 100%;\n}\n\n.categorias {\n  padding: 50px 0 40px;\n}\n\n.categorias .col-md-4 {\n  margin-bottom: 50px;  \n}\n\n.categoria {\n  text-align: center;\n  color:  #4ab7b1;\n}\n\n.categoria .image {\n  position: relative;\n}\n\n@media(max-width: 640px) {\n  .categoria img {\n    width: 100%;\n  }\n}\n\n.categoria h4 {\n  font-size: 18px;\n}\n\n.categorias a:hover .effect {\n  display: block;\n}\n\n.effect {\n  background: rgba(88,188,167,0.9) url(" + __webpack_require__("../../../../../src/assets/ico-ver-mas-cat.png") + ") no-repeat center center;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  display: none;\n}\n\n.effect p {\n  color: #fff;\n  position: absolute;\n  bottom: 20%;\n  width: 100%;\n}", ""]);
+exports.push([module.i, "#slider {\n\n}\n\n#slider img {\n  width: 100%;\n}\n\n.categorias {\n  padding: 50px 0 40px;\n}\n\n.categorias .col-md-4 {\n  margin-bottom: 50px;  \n}\n\n.categoria {\n  text-align: center;\n  color:  #04BDCC;\n}\n\n.categoria .image {\n  position: relative;\n}\n\n@media(max-width: 640px) {\n  .categoria img {\n    width: 100%;\n  }\n}\n\n.categoria h4 {\n  font-size: 18px;\n}\n\n.categorias a:hover .effect {\n  display: block;\n}\n\n.effect {\n  background: rgba(4,189,204,0.9) url(" + __webpack_require__("../../../../../src/assets/ico-ver-mas-cat.png") + ") no-repeat center center;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  display: none;\n}\n\n.effect p {\n  color: #fff;\n  position: absolute;\n  bottom: 20%;\n  width: 100%;\n}", ""]);
 
 // exports
 
@@ -723,16 +713,16 @@ var CATEGORIAS = [
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PRODUCTOS; });
 var PRODUCTOS = [
-    { id: 1, name: 'Gorras', categoria_id: 1, pic: 'gorras' },
-    { id: 2, name: 'Polos Cuello Redondo', categoria_id: 1, pic: 'polos-redondo' },
-    { id: 3, name: 'Polos Pique', categoria_id: 1, pic: 'polos-pique' },
+    { id: 1, name: 'Secretaria', categoria_id: 1, pic: 'secretaria' },
+    { id: 2, name: 'Uniforme Varón', categoria_id: 1, pic: 'uniforme-varon' },
+    { id: 3, name: 'Uniforme Mujer', categoria_id: 1, pic: 'uniforme-mujer' },
     { id: 4, name: 'Chalecos / Tras / Seg', categoria_id: 1, pic: 'chalecos-tras' },
     { id: 5, name: 'Uniforme Médico', categoria_id: 1, pic: 'uniforme-medico' },
     { id: 6, name: 'Uniforme Industrial', categoria_id: 1, pic: 'industrial' },
     { id: 7, name: 'Uniforme Industrial', categoria_id: 1, pic: 'industrial-2' },
     { id: 8, name: 'Sweater', categoria_id: 1, pic: 'sweater' },
     { id: 9, name: 'Botas', categoria_id: 1, pic: 'botas' },
-    { id: 10, name: 'Gorras', categoria_id: 2, pic: 'gorras' },
+    { id: 10, name: 'Casco', categoria_id: 2, pic: 'casco' },
     { id: 11, name: 'Polos Cuello Redondo', categoria_id: 2, pic: 'polos-redondo' },
     { id: 12, name: 'Polos Pique', categoria_id: 2, pic: 'polos-pique' },
     { id: 13, name: 'Chalecos / Tras / Seg', categoria_id: 2, pic: 'chalecos-tras' },
@@ -740,7 +730,7 @@ var PRODUCTOS = [
     { id: 15, name: 'Uniforme Industrial', categoria_id: 2, pic: 'industrial' },
     { id: 16, name: 'Sombrero Chef', categoria_id: 3, pic: 'sombrero-chef' },
     { id: 17, name: 'Traje Chef', categoria_id: 3, pic: 'traje-chef' },
-    { id: 18, name: 'Polos Pique', categoria_id: 3, pic: 'polos-pique' },
+    { id: 18, name: 'Polos Pique', categoria_id: 3, pic: 'polos-pique-2' },
     { id: 19, name: 'Cocinero', categoria_id: 3, pic: 'cocinero' },
     { id: 20, name: 'Mandil', categoria_id: 3, pic: 'mandil' },
     { id: 21, name: 'Mozo', categoria_id: 3, pic: 'mozo' },
@@ -766,9 +756,9 @@ var PRODUCTOS = [
     { id: 41, name: 'Chompa Cuello V', categoria_id: 5, pic: 'chompa-v' },
     { id: 42, name: 'Pijama de Niño', categoria_id: 5, pic: 'pijama' },
     { id: 43, name: 'Gorras', categoria_id: 6, pic: 'gorras' },
-    { id: 44, name: 'Polos Cuello Redondo', categoria_id: 6, pic: 'polos-redondo' },
-    { id: 45, name: 'Polos Pique', categoria_id: 6, pic: 'polos-pique' },
-    { id: 46, name: 'BVD', categoria_id: 6, pic: 'bvd' },
+    { id: 44, name: 'Equipo de Seguridad', categoria_id: 6, pic: 'equipo-seguridad' },
+    { id: 45, name: 'Bolsa', categoria_id: 6, pic: 'bolsa' },
+    { id: 46, name: 'Vicera', categoria_id: 6, pic: 'vicera' },
     { id: 47, name: 'Bolso de Tela', categoria_id: 6, pic: 'bolso-tela' },
     { id: 48, name: 'Lonchera de Tela', categoria_id: 6, pic: 'lonchera-tela' },
     { id: 49, name: 'Toalla', categoria_id: 6, pic: 'toalla' },
@@ -821,7 +811,7 @@ ProductoService = __decorate([
 /***/ "../../../../../src/app/social-links.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"links\">\n  <a href=\"https://www.facebook.com/Rhua-Representaciones-189164621191094/\" class=\"fb\" target=\"_blank\">Facebook</a>\n  <!--a href=\"#\" class=\"ig\" target=\"_blank\">Instagram</a-->\n  <a href=\"mailto:ventas@rhuarepresentaciones.com\" class=\"em\" target=\"_blank\">E-mail</a>\n</div>\n"
+module.exports = "<div class=\"links\">\n  <a href=\"https://www.facebook.com/RhuaUniformesyMerch/\" class=\"fb\" target=\"_blank\">Facebook</a>\n  <!--a href=\"#\" class=\"ig\" target=\"_blank\">Instagram</a-->\n  <a href=\"mailto:ventas@rhuarepresentaciones.com\" class=\"em\" target=\"_blank\">E-mail</a>\n</div>\n"
 
 /***/ }),
 
