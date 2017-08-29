@@ -185,17 +185,18 @@ var _a;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_component__ = __webpack_require__("../../../../../src/app/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__footer_component__ = __webpack_require__("../../../../../src/app/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__social_links_component__ = __webpack_require__("../../../../../src/app/social-links.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mini_component__ = __webpack_require__("../../../../../src/app/mini.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__categoria_service__ = __webpack_require__("../../../../../src/app/categoria.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__producto_service__ = __webpack_require__("../../../../../src/app/producto.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__home_component__ = __webpack_require__("../../../../../src/app/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__about_component__ = __webpack_require__("../../../../../src/app/about.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__detalle_component__ = __webpack_require__("../../../../../src/app/detalle.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__header_component__ = __webpack_require__("../../../../../src/app/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__footer_component__ = __webpack_require__("../../../../../src/app/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__social_links_component__ = __webpack_require__("../../../../../src/app/social-links.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mini_component__ = __webpack_require__("../../../../../src/app/mini.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__categoria_service__ = __webpack_require__("../../../../../src/app/categoria.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__producto_service__ = __webpack_require__("../../../../../src/app/producto.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__home_component__ = __webpack_require__("../../../../../src/app/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__about_component__ = __webpack_require__("../../../../../src/app/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__detalle_component__ = __webpack_require__("../../../../../src/app/detalle.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -203,6 +204,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -226,24 +228,25 @@ var AppModule = (function () {
 AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_3__header_component__["a" /* HeaderComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__footer_component__["a" /* FooterComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__social_links_component__["a" /* SocialLinksComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__about_component__["a" /* AboutComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__detalle_component__["a" /* DetalleComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__mini_component__["a" /* MiniComponent */],
+            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_4__header_component__["a" /* HeaderComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__footer_component__["a" /* FooterComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__social_links_component__["a" /* SocialLinksComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__about_component__["a" /* AboutComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__detalle_component__["a" /* DetalleComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__mini_component__["a" /* MiniComponent */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_12__app_routing_module__["a" /* AppRoutingModule */]
+            __WEBPACK_IMPORTED_MODULE_13__app_routing_module__["a" /* AppRoutingModule */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_7__categoria_service__["a" /* CategoriaService */],
-            __WEBPACK_IMPORTED_MODULE_8__producto_service__["a" /* ProductoService */]
+            __WEBPACK_IMPORTED_MODULE_8__categoria_service__["a" /* CategoriaService */],
+            __WEBPACK_IMPORTED_MODULE_9__producto_service__["a" /* ProductoService */],
+            { provide: __WEBPACK_IMPORTED_MODULE_2__angular_common__["a" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_2__angular_common__["b" /* HashLocationStrategy */] }
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -283,7 +286,7 @@ var CategoriaService = (function () {
     return CategoriaService;
 }());
 CategoriaService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])()
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Injectable */])()
 ], CategoriaService);
 
 //# sourceMappingURL=categoria.service.js.map
@@ -385,7 +388,7 @@ var DetalleComponent = (function () {
     return DetalleComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* Input */])(),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__categoria__["a" /* Categoria */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__categoria__["a" /* Categoria */]) === "function" && _a || Object)
 ], DetalleComponent.prototype, "categoria", void 0);
 DetalleComponent = __decorate([
@@ -394,7 +397,7 @@ DetalleComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/detalle.component.html"),
         styles: [__webpack_require__("../../../../../src/app/detalle.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__categoria_service__["a" /* CategoriaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__categoria_service__["a" /* CategoriaService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["b" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["b" /* Location */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__producto_service__["a" /* ProductoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__producto_service__["a" /* ProductoService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__categoria_service__["a" /* CategoriaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__categoria_service__["a" /* CategoriaService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["c" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["c" /* Location */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__producto_service__["a" /* ProductoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__producto_service__["a" /* ProductoService */]) === "function" && _e || Object])
 ], DetalleComponent);
 
 var _a, _b, _c, _d, _e;
@@ -423,7 +426,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"info\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>367</span>\n          productos realizados\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>85</span>\n          clientes felices\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>30</span>\n          licitaciones\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>183</span>\n          proyectos\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"container\">\n  <div class=\"logos\" id=\"clientes\">\n    <div class=\"cliente-container\"><img src=\"assets/logos/gatorade.png\" alt=\"Gatorade\" class=\"cliente gatorade\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/mapfre.png\" alt=\"Mapfre\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/sura.png\" alt=\"Seguros Sura\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/lima.png\" alt=\"Municipalidad de Lima\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/lays.png\" alt=\"Lays\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/pepsi.png\" alt=\"Pepsi\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/falabella.png\" alt=\"Seguros Falabella\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/volkswagen.png\" alt=\"Volkswagen\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/entel.png\" alt=\"Entel\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/bcp.png\" alt=\"BCP\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/essalud.png\" alt=\"ESSALUD\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/protransporte.png\" alt=\"ProTransporte\" class=\"cliente\"></div>\n  </div>\n  <div class=\"social-clientes\">\n    <social-links></social-links>\n  </div>\n</div>\n\n<div class=\"contact\" id=\"contacto\">\n  <div class=\"container\">\n    <div class=\"col-md-4\">\n      <div class=\"form-container\">\n        <form>\n          <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" name=\"nombre\" placeholder=\"Nombre\" required>\n          </div>\n          <div class=\"form-group\">\n            <input type=\"email\" class=\"form-control\" name=\"email\" placeholder=\"Correo\" required>\n          </div>\n          <div class=\"form-group\">\n            <textarea name=\"\" id=\"\" cols=\"30\" rows=\"10\" class=\"form-control\" name=\"mensaje\" placeholder=\"Mensaje\" required></textarea>\n          </div>\n          <button class=\"btn btn-info\">Enviar</button>\n        </form>\n      </div>\n    </div>\n    <div class=\"col-md-4 col-md-offset-4\">\n      <div class=\"contact-container\">\n        <h3>Contacto</h3>\n        <p>\n          Dirección: Ca. Fray Angélico 421 - 101 San Borja <br>\n          Teléfonos: (01) 2251514 - 987005608 <br>\n          Correo: ventas@rhuarepresentaciones.com\n        </p>\n        <social-links></social-links>\n      </div>\n    </div>\n  </div>\n  <p class=\"text-center\">\n    <span class=\"find-us\">Encuéntranos</span>\n  </p>\n</div>\n\n<div class=\"map\">\n  <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1358187957862!2d-77.00198508518683!3d-12.102853191429986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7dcc5162103%3A0x30e44adc43cb76b3!2sLeo+Delibes%2C+Distrito+de+Lima+15037!5e0!3m2!1ses-419!2spe!4v1501116590902\" width=\"100%\" height=\"350\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>\n</div>\n\n<footer class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-2\">\n        <a routerLink=\"/\" class=\"logo-footer\"><img src=\"assets/logo-footer.png\" alt=\"rhua\"></a>\n      </div>\n      <div class=\"col-md-8\">\n        <div class=\"row\">\n          <div class=\"col-md-2 footer-links\">\n            <h3>Nosotros</h3>\n            <ul class=\"list-unstyled\">\n              <li><a [routerLink]=\"['/nosotros']\">Quienes somos</a></li>\n              <li><a [routerLink]=\"['/nosotros']\">Misión</a></li>\n              <li><a [routerLink]=\"['/nosotros']\">Visión</a></li>\n            </ul>\n          </div>\n          <div class=\"col-md-2 footer-links\">\n            <h3>Productos</h3>\n            <ul class=\"list-unstyled\">\n              <li *ngFor=\"let categoria of categorias\"><a [routerLink]=\"['/categoria', categoria.pic]\">{{categoria.short}}</a></li>\n            </ul>\n          </div>\n          <div class=\"col-md-2 footer-links\">\n            <h3>Clientes</h3>\n          </div>\n          <div class=\"col-md-6 footer-links\">\n            <h3>Contacto</h3>\n            <p>\n              Dirección: Ca. Fray Angélico 421 - 101 San Borja <br>\n              Teléfonos: (01) 2251514 - 987005608 <br>\n              Correo: ventas@rhuarepresentaciones.com\n            </p>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-md-2\">\n        <social-links></social-links>\n      </div>\n    </div>\n  </div>\n</footer>"
+module.exports = "<div class=\"info\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>367</span>\n          productos realizados\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>85</span>\n          clientes felices\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>30</span>\n          licitaciones\n        </div>\n      </div>\n      <div class=\"col-md-3\">\n        <div class=\"numbers\">\n          <span>183</span>\n          proyectos\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"container\">\n  <div class=\"logos\" id=\"clientes\">\n    <div class=\"cliente-container\"><img src=\"assets/logos/gatorade.png\" alt=\"Gatorade\" class=\"cliente gatorade\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/mapfre.png\" alt=\"Mapfre\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/sura.png\" alt=\"Seguros Sura\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/lima.png\" alt=\"Municipalidad de Lima\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/lays.png\" alt=\"Lays\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/pepsi.png\" alt=\"Pepsi\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/falabella.png\" alt=\"Seguros Falabella\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/volkswagen.png\" alt=\"Volkswagen\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/entel.png\" alt=\"Entel\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/bcp.png\" alt=\"BCP\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/essalud.png\" alt=\"ESSALUD\" class=\"cliente\"></div>\n    <div class=\"cliente-container\"><img src=\"assets/logos/protransporte.png\" alt=\"ProTransporte\" class=\"cliente\"></div>\n  </div>\n  <div class=\"social-clientes\">\n    <social-links></social-links>\n  </div>\n</div>\n\n<div class=\"contact\" id=\"contacto\">\n  <div class=\"container\">\n    <div class=\"col-md-4\">\n      <div class=\"form-container\">\n        <form>\n          <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" name=\"nombre\" placeholder=\"Nombre\" required>\n          </div>\n          <div class=\"form-group\">\n            <input type=\"email\" class=\"form-control\" name=\"email\" placeholder=\"Correo\" required>\n          </div>\n          <div class=\"form-group\">\n            <textarea name=\"\" id=\"\" cols=\"30\" rows=\"10\" class=\"form-control\" name=\"mensaje\" placeholder=\"Mensaje\" required></textarea>\n          </div>\n          <button class=\"btn btn-info\">Enviar</button>\n        </form>\n      </div>\n    </div>\n    <div class=\"col-md-4 col-md-offset-4\">\n      <div class=\"contact-container\">\n        <h3>Contacto</h3>\n        <p>\n          Dirección: Ca. Fray Angélico 421 - 101 San Borja <br>\n          Teléfonos: (01) 2251514 - 987005608 <br>\n          Correo: ventas@rhuarepresentaciones.com\n        </p>\n        <social-links></social-links>\n      </div>\n    </div>\n  </div>\n  <p class=\"text-center\">\n    <span class=\"find-us\">Encuéntranos</span>\n  </p>\n</div>\n\n<div class=\"map\">\n  <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.2564903500565!2d-77.00048465011625!3d-12.094585391393485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7cffae5a819%3A0xc2a33f4d2258cf4c!2sFray+Angelico+101%2C+Cercado+de+Lima+15037!5e0!3m2!1ses-419!2spe!4v1503782893045\" width=\"100%\" height=\"350\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>\n</div>\n\n<footer class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-2\">\n        <a routerLink=\"/\" class=\"logo-footer\"><img src=\"assets/logo-footer.png\" alt=\"rhua\"></a>\n      </div>\n      <div class=\"col-md-8\">\n        <div class=\"row\">\n          <div class=\"col-md-2 footer-links\">\n            <h3>Nosotros</h3>\n            <ul class=\"list-unstyled\">\n              <li><a [routerLink]=\"['/nosotros']\">Quienes somos</a></li>\n              <li><a [routerLink]=\"['/nosotros']\">Misión</a></li>\n              <li><a [routerLink]=\"['/nosotros']\">Visión</a></li>\n            </ul>\n          </div>\n          <div class=\"col-md-2 footer-links\">\n            <h3>Productos</h3>\n            <ul class=\"list-unstyled\">\n              <li *ngFor=\"let categoria of categorias\"><a [routerLink]=\"['/categoria', categoria.pic]\">{{categoria.short}}</a></li>\n            </ul>\n          </div>\n          <div class=\"col-md-2 footer-links\">\n            <h3>Clientes</h3>\n          </div>\n          <div class=\"col-md-6 footer-links\">\n            <h3>Contacto</h3>\n            <p>\n              Dirección: Ca. Fray Angélico 421 - 101 San Borja <br>\n              Teléfonos: (01) 2251514 - 987005608 <br>\n              Correo: ventas@rhuarepresentaciones.com\n            </p>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-md-2\">\n        <social-links></social-links>\n      </div>\n    </div>\n  </div>\n</footer>"
 
 /***/ }),
 
@@ -801,7 +804,7 @@ var ProductoService = (function () {
     return ProductoService;
 }());
 ProductoService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])()
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Injectable */])()
 ], ProductoService);
 
 //# sourceMappingURL=producto.service.js.map
